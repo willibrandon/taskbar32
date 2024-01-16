@@ -1,0 +1,2 @@
+﻿ITaskbarList4
+RECT

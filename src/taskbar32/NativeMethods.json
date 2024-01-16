@@ -1,0 +1,24 @@
+﻿{
+  "comInterop": {
+    "preserveSigMethods": [
+      "ITaskbarList4.ActivateTab",
+      "ITaskbarList4.AddTab",
+      "ITaskbarList4.DeleteTab",
+      "ITaskbarList4.MarkFullscreenWindow",
+      "ITaskbarList4.RegisterTab",
+      "ITaskbarList4.SetActiveAlt",
+      "ITaskbarList4.SetOverlayIcon",
+      "ITaskbarList4.SetProgressState",
+      "ITaskbarList4.SetProgressValue",
+      "ITaskbarList4.SetTabActive",
+      "ITaskbarList4.SetTabOrder",
+      "ITaskbarList4.SetThumbnailClip",
+      "ITaskbarList4.SetThumbnailTooltip",
+      "ITaskbarList4.ThumbBarAddButtons",
+      "ITaskbarList4.ThumbBarUpdateButtons",
+      "ITaskbarList4.ThumbBarSetImageList",
+      "ITaskbarList4.UnregisterTab"
+    ]
+  },
+  "public": true
+}
