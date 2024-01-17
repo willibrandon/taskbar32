@@ -113,6 +113,6 @@ public class FormExtensionsTests
         using Form form = new();
         form.Show();
 
-        form.SetThumbnailTooltip("Meow");
+        form.SetThumbnailTooltip("Meow ❤️");
     }
 }

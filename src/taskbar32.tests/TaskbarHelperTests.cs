@@ -1,4 +1,4 @@
-namespace taskbar32.tests;
+﻿namespace taskbar32.tests;
 
 public class TaskbarHelperTests
 {
@@ -126,6 +126,6 @@ public class TaskbarHelperTests
         form.Show();
 
         TaskbarHelper taskbarHelper = new(form.Handle);
-        taskbarHelper.SetThumbnailTooltip("Meow");
+        taskbarHelper.SetThumbnailTooltip("Meow ❤️");
     }
 }
