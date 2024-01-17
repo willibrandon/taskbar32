@@ -3,7 +3,7 @@ namespace taskbar32.tests;
 public class TaskbarHelperTests
 {
     [WinFormsFact]
-    public void TaskbarHelper_ActivateTab()
+    public void ActivateTab()
     {
         using Form form = new();
         form.Show();
@@ -13,7 +13,7 @@ public class TaskbarHelperTests
     }
 
     [WinFormsFact]
-    public void TaskbarHelper_DeleteTab_AddTab()
+    public void DeleteTab_AddTab()
     {
         using Form form = new();
         form.Show();
@@ -23,10 +23,24 @@ public class TaskbarHelperTests
         taskbarHelper.AddTab();
     }
 
+    [WinFormsFact]
+    public void DisplayProgress()
+    {
+        using Form form = new();
+        form.Show();
+
+        TaskbarHelper taskbarHelper = new(form.Handle);
+
+        foreach (int i in Enumerable.Range(0, 100))
+        {
+            taskbarHelper.SetProgressValue(completed: i, total: 100);
+        }
+    }
+
     [WinFormsTheory]
     [InlineData(true)]
     [InlineData(false)]
-    public void TaskbarHelper_MarkFullscreenWindow(bool fullScreen)
+    public void MarkFullscreenWindow(bool fullScreen)
     {
         using Form form = new();
         form.Show();
@@ -36,7 +50,7 @@ public class TaskbarHelperTests
     }
 
     [WinFormsFact]
-    public void TaskbarHelper_SetActiveAlt()
+    public void SetActiveAlt()
     {
         using Form form = new();
         form.Show();
@@ -46,7 +60,7 @@ public class TaskbarHelperTests
     }
 
     [WinFormsFact]
-    public void TaskbarHelper_SetProgressState_Error()
+    public void SetProgressState_Error()
     {
         using Form form = new();
         form.Show();
@@ -56,7 +70,7 @@ public class TaskbarHelperTests
     }
 
     [WinFormsFact]
-    public void TaskbarHelper_SetProgressState_Indeterminate()
+    public void SetProgressState_Indeterminate()
     {
         using Form form = new();
         form.Show();
@@ -66,7 +80,7 @@ public class TaskbarHelperTests
     }
 
     [WinFormsFact]
-    public void TaskbarHelper_SetProgressState_NoProgress()
+    public void SetProgressState_NoProgress()
     {
         using Form form = new();
         form.Show();
@@ -76,7 +90,7 @@ public class TaskbarHelperTests
     }
 
     [WinFormsFact]
-    public void TaskbarHelper_SetProgressState_Normal()
+    public void SetProgressState_Normal()
     {
         using Form form = new();
         form.Show();
@@ -86,7 +100,7 @@ public class TaskbarHelperTests
     }
 
     [WinFormsFact]
-    public void TaskbarHelper_SetProgressState_Paused()
+    public void SetProgressState_Paused()
     {
         using Form form = new();
         form.Show();
@@ -96,7 +110,7 @@ public class TaskbarHelperTests
     }
 
     [WinFormsFact]
-    public void TaskbarHelper_SetProgressValue()
+    public void SetProgressValue()
     {
         using Form form = new();
         form.Show();
@@ -106,7 +120,7 @@ public class TaskbarHelperTests
     }
 
     [WinFormsFact]
-    public void TaskbarHelper_SetThumbnailTooltip()
+    public void SetThumbnailTooltip()
     {
         using Form form = new();
         form.Show();

@@ -21,6 +21,18 @@ public class FormExtensionsTests
         form.AddTab();
     }
 
+    [WinFormsFact]
+    public void DisplayProgress()
+    {
+        using Form form = new();
+        form.Show();
+
+        foreach (int i in Enumerable.Range(0, 100))
+        {
+            form.SetProgressValue(completed: i, total: 100);
+        }
+    }
+
     [WinFormsTheory]
     [InlineData(true)]
     [InlineData(false)]
