@@ -1,2 +1,3 @@
 ﻿ITaskbarList4
 RECT
+TaskbarList
